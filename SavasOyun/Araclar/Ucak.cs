@@ -21,9 +21,11 @@ namespace SavasOyun.Araclar
             Vurus = 10;
         }
 
-        public override void DurumGuncelle(int alinanHasar)
+        public override void DayaniklilikGuncelle(int alinanHasar)
         {
             Dayaniklilik -= alinanHasar;
         }
+
+        //Burada vurusHesapla fonksiyonunu override etmemize gerek yok
     }
 }

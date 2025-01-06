@@ -15,13 +15,18 @@ namespace SavasOyun.Araclar
 
     public enum AltSinif
     {
-        Ucak,
-        Siha,
         Obus,
-        KFS,
         Firkateyn,
-        Sida
-    
+        Ucak,
+        KFS,
+        Sida,
+        Siha,
+    }
+
+    public enum KartDurumu
+    {
+        Elde,
+        Yerde,
     }
 
 }

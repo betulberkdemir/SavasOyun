@@ -11,14 +11,28 @@ namespace SavasOyun.Araclar
         //somut
         public int Seviye { get; set; }
 
+        public KartDurumu KartDurumu { get; set; }
+
         //soyut
         public abstract int Dayaniklilik { get; set; }
         public abstract int Vurus { get; set; }
         public abstract Sinif Sinif { get; set; }
-        
+        public abstract AltSinif Altsinif { get; set; }
+
+        //kartta otomatik görünmesi için ekledim.
+        //başka sınıfta override edip constructor ile değer vermem gerekiyor.
+
+        //public abstract int DenizAvantaji {  get; set; }
+        //public abstract int KaraAvantaji { get; set; }
+
+        //public abstract int HavaAvantaji {  get; set; }
+
+
+
         //ctor
         public SavasArac(int seviye = 0)
         {
+            KartDurumu = KartDurumu.Elde;
         }
 
         //somut
@@ -29,7 +43,15 @@ namespace SavasOyun.Araclar
         }
 
         //soyut
-        public abstract void DurumGuncelle(int alinanHasar);
+        public abstract void DayaniklilikGuncelle(int alinanHasar);
+
+        //sanal
+        public virtual int VurusHesapla(Sinif rakipSinifi)
+        {
+            // Burada virtual tanımlamamızın sebebi her kartın bu metodu gerekirse override edip hasar hesaplama mantığını değiştirmesini sağlamaktır.
+            // Burada abstract tanımla mı yoruz çünkü her kart ortak olarak varsayılan vuruş hasarına sahiptir, bizde onu döndürüyoruz.
+            return Vurus;
+        }
     }
 }
 

@@ -6,22 +6,33 @@ using System.Threading.Tasks;
 
 namespace SavasOyun.Araclar
 {
-    public class Siha: HavaArac
+    internal class KFS : KaraArac
     {
         public override AltSinif Altsinif { get; set; }
-        public override int KaraVurusAvantaji { get; set; }
-        public override int Dayaniklilik { get; set; }
+        public override int DenizVurusAvantaji { get; set; }
+        public override int Dayaniklilik { get ; set; }
         public override int Vurus { get; set; }
+        public int HavaVurusAvantaji { get; set; }
 
-        public int DenizVurusAvantaji { get; set; }
+        
 
-        public Siha(int seviye = 0) : base(seviye)
+        
+        public KFS (int seviye = 0 ) : base(seviye)
         {
-            Altsinif = AltSinif.Siha;
-            KaraVurusAvantaji = 10;
-            Dayaniklilik = 15;
-            Vurus = 10;
+
+            Altsinif = AltSinif.KFS;
             DenizVurusAvantaji = 10;
+            Dayaniklilik = 20;
+            Vurus = 10;
+            HavaVurusAvantaji = 20;
+            
+
+        }
+
+
+        public void GuncelPuanGoster()
+        {
+            KartPuaniGoster(); // Base class'ın metodunu çağır
         }
 
         public override void DayaniklilikGuncelle(int alinanHasar)
@@ -32,12 +43,12 @@ namespace SavasOyun.Araclar
         public override int VurusHesapla(Sinif rakipSinifi)
         {
             int hesaplananVurus = base.VurusHesapla(rakipSinifi);
-
-            if(rakipSinifi == Sinif.Deniz)
+            if(rakipSinifi == Sinif.Hava)
             {
-                hesaplananVurus += DenizVurusAvantaji;
+                hesaplananVurus += HavaVurusAvantaji;
             }
             return hesaplananVurus;
+
         }
     }
 }
