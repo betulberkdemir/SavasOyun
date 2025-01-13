@@ -82,7 +82,7 @@ namespace SavasOyun
                     denizArac = arac as DenizArac; // (DenizArac)arac
                     HavaArac havaArac;
                     havaArac = arac as HavaArac;
-                    //havaArac.Sinif//beim yaptığım referans hatası
+                    //havaArac.Sinif//benim yaptığım referans hatası
 
                     if(arac is HavaArac hava)//hava arac referans ediyor
                     {
@@ -103,9 +103,9 @@ namespace SavasOyun
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        //private void pictureBox1_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

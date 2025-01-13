@@ -1,4 +1,5 @@
 ﻿using SavasOyun.Araclar;
+using SavasOyun.Oyuncular;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,61 @@ namespace SavasOyun
         public Form1()
         {
             InitializeComponent();
+            // kullanıcılARI VE destelerini oluştur
+            // oyuncunun kartlarını bir yere kat
+            //this.Size = new Size(800, 600); // Genişlik: 800, Yükseklik: 600
+
+            //kartTutucuKucuk1.SavasKarti = new Ucak();
+            //kartTutucuKucuk2.SavasKarti = new Obus();
+            //kartTutucuKucuk3.SavasKarti = new Firkateyn();
+            //kartTutucuKucuk4.SavasKarti = new Obus();
+            //kartTutucuKucuk5.SavasKarti = new Ucak();
+            //kartTutucuKucuk6.SavasKarti = new Firkateyn();
+            this.Size = new Size(850, 1102);
+            // form 1121; 1102 ()
+
+            // Create Bilgisayar object
+            Bilgisayar bilgisayar = new Bilgisayar();
+
+            // Select 3 cards
+            SavasArac kart1 = bilgisayar.KartSec();
+            SavasArac kart2 = bilgisayar.KartSec();
+            SavasArac kart3 = bilgisayar.KartSec();
+
+            // Assign selected cards to kartTutucu elements
+            kartTutucu1.SavasKarti = kart1;
+            kartTutucu2.SavasKarti = kart2;
+            kartTutucu3.SavasKarti = kart3;
+
+            UpdateKartTutucuKucukElements();
+
+
+
         }
+
+        private void UpdateKartTutucuKucukElements()
+        {
+            Oyuncu kullanici = new Kullanici(1, "");
+            kullanici.KullaniciKartListesi(); 
+
+            // Ensure there are enough kartTutucuKucuk elements to display the cards
+            var kartTutucuKucukElements = new List<KartTutucuKucuk>
+        {
+            kartTutucuKucuk1,
+            kartTutucuKucuk2,
+            kartTutucuKucuk3,
+            kartTutucuKucuk4,
+            kartTutucuKucuk5,
+            kartTutucuKucuk6
+        };
+
+            for (int i = 0; i < kullanici.KartListesi.Count && i < kartTutucuKucukElements.Count; i++)
+            {
+                kartTutucuKucukElements[i].SavasKarti = kullanici.KartListesi[i];
+            }
+        }
+
+
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -157,6 +212,55 @@ namespace SavasOyun
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox1.Text = string.Empty;//mantığı yok!
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+
+
+        }
+
+        private void arena1_Click(object sender, EventArgs e)
+        {
+            //arena1_Click --> kartTutucuKucuk1'deki kart --> kartTutucu4'deki yere yerleşecek.
+            //kartTutucuKucuk1'de (uçak obüs firkateyn) --> kartTutucuKucuk1.SavasKarti = new Sida();
+            //kartTutucu4'e gitsin
+            //kartTutucuKucuk1.SavasKarti = new Sida(); üretmesine gerek yok başlangıçta zaten var
+            //kartı kullanıcın kartına göndermesi gerekiyor
+            //karttutucu4' de kart nesnesi oluşacak
+            //
+
+            kartTutucu4.SavasKarti = new Ucak();
+            
+            
+
+
+
+        }
+
+
+        //kartTutucukucukten karttutucuya kart gittikten sonra kucukten gittiği belli olsun diye gri yap.
+        //bilgisayara gitmesine gerek yok rastgele kullanıcıya gitsin.
+        private void arena2_Click(object sender, EventArgs e)
+        {
+            kartTutucu5.SavasKarti = new Obus();
+            //rastgele bir kart oluşacak.
+
+
+        }
+
+        private void arena3_Click(object sender, EventArgs e)
+        {
+            kartTutucu6.SavasKarti = new Firkateyn();
+        }
+
+        //OYUNCU BUTONA BAS // OYUNCU NESNE OLUŞTUR  // NESNEDEN RASTGELE METOD ÇAĞIR//
+        private void oyuncuButton_Click(object sender, EventArgs e)
+        {
+               //kullanıcıdan nesne + kart çekme
+
         }
     }
 }

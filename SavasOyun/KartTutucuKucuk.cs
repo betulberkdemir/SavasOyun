@@ -29,6 +29,7 @@ namespace SavasOyun
         private void SetSavasArac(SavasArac savasKarti)
         {
             //İlk kısım thread safe erişim için gerekli
+            
             if (InvokeRequired)
             {
                 Invoke((DelegateSetSetSavasArac)SetSavasArac, new object[] { savasKarti });
@@ -38,7 +39,7 @@ namespace SavasOyun
                 _savasKarti = savasKarti;
                 if (savasKarti == null)
                 {
-                    lblKartAdi.Text = "";
+                    lblKart.Text = "";
                     pictureBox1.Image = null;
                     lblTur.Text = "";
                     lblDayaniklilik.Text = "";
@@ -50,13 +51,18 @@ namespace SavasOyun
                 else
                 {
                     (string kartAdi, Image kartResmi) = SavasAracExtensions.GetKartAdiVeResim(savasKarti);
-                    lblKartAdi.Text = kartAdi;
+                    lblKart.Text = kartAdi;
                     pictureBox1.Image = kartResmi;
                     lblTur.Text = $"T:{savasKarti.Sinif}";
                     lblDayaniklilik.Text = $"D:{savasKarti.Dayaniklilik}";
                     lblVurus.Text = $"V:{savasKarti.Vurus}";
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

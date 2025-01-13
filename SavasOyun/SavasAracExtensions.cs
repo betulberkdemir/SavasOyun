@@ -21,6 +21,8 @@ namespace SavasOyun
     {
         public static readonly Random Random = new Random();
 
+
+        //karttutucu ve karttutucukucuk bu static metodu kullanarak kartın adını ve resmini alıyor
         public static (string, Image) GetKartAdiVeResim(SavasArac savasArac)
         {
             string kartAdi = null;
@@ -58,7 +60,8 @@ namespace SavasOyun
 
             return (kartAdi, kartResmi);
         }
-
+        //form'da rastgele kart oluşturup kullanıcın kartlarına ekle.
+        //altı tane kücük kart var bu kartları rastgele kullanıcıya ve bilgisayara gönder hamle bittikten sonra
         public static SavasArac RasgeleKartOlustur(bool ozelKartDahil, int seviye = 0)
         {
             int cardTipi = ozelKartDahil ? Random.Next(0, 6) : Random.Next(0, 3);
@@ -86,11 +89,11 @@ namespace SavasOyun
             }
         }
 
+        //kartları savaştır ve total dmg'e (label) gönder.
         public static SavasSonucu KartlariSavastir(SavasArac arac1, SavasArac arac2)
         {
             // TODO: kart savaşma mekaniği
-
-            //karlarıın birbirine olan hasarını hesapla arac1.VurusHesapla
+            //kartlarıın birbirine olan hasarını hesapla arac1.VurusHesapla
             //kartın dayanık ve rakibe olan hasar değerlerinden en küçük olanı al
             //bu değeri rakibe vur arac1.DayaniklilikGuncelle
             //eğer bir kart diğerini öldürse onun seviyesini alır 
@@ -104,54 +107,7 @@ namespace SavasOyun
             arac1.DayaniklilikGuncelle(mumkunOlanVurus2);
             arac2.DayaniklilikGuncelle(mumkunOlanVurus1);
 
-            // KÖTÜ ÖRNEK
-            //if(arac1.Dayaniklilik <= 0 )
-            //{
-            //    // arac 1 öldüyse
-            //    if(arac2.Dayaniklilik >= 0 )
-            //    {
-            //        //arac 2 yasıyorsa
-            //    }
-            //} 
-            //if(arac2.Dayaniklilik <= 0)
-            //{
-            //    // arac 2 öldüyse
-            //    if (arac2.Dayaniklilik >= 0)
-            //    {
-            //        //arac 1 yasıyorsa
-            //    }
-            //}
-
-            //// ANLASILIR ÖRNEK
-            //if(arac1.Dayaniklilik <= 0 && arac2.Dayaniklilik <= 0)
-            //{
-            //    //ikisi öldüyse ??//Karları Yenile --> kart ekleeeee nesne oluştur arac1 için veya arac2 için
-            //    arac1 = yeniKart; //bilgisayar veya oyuncu için rastgele kart oluşturup arac1 VEYA arac2 için eklliyecem.
-            //    //hamle bittiyse yeni kart oluşturmaya gerek yok!!!!!(hamle bitti koşulu nasıl yapılır?)
-            //}
-            //else if (arac1.Dayaniklilik <= 0)
-            //{
-            //    //arac 1 ölduyse ?? //arac2.Seviye += Math.Max(arac1.Seviye, 10); arac1 veya arac1'in vuruşu
-            //    arac2.Seviye += Math.Max(arac1.Seviye,10);
-            //    //SEVİYE BURDA ZATEN GÜNCELLENİYOR !!!!!!!
-
-
-            //}
-            //else if (arac2.Dayaniklilik <= 0)
-            //{
-            //    //arac 2 ölduyse ??
-            //    arac1.Seviye += Math.Max(arac2.Seviye, 10);
-            //    //arac 2 öldüyse arac1 seviyesini arac2 vurus ile karşılaştır arac1'e ekle. 
-            //}
-            //else
-            //{
-            //    // iki aracta yasıyorsa?? //Kartları ele gönder
-            //    if(arac1.Dayaniklilik > 0 && arac2.Dayaniklilik > 0)
-            //    {
-            //        arac1.KartDurumu = KartDurumu.Elde;
-            //        arac2.KartDurumu = KartDurumu.Elde;
-            //    }
-            //}
+            
             if (arac1.Dayaniklilik <= 0 && arac2.Dayaniklilik <= 0)
                 return SavasSonucu.YokOldular;
             else if (arac1.Dayaniklilik <= 0)
@@ -182,16 +138,15 @@ namespace SavasOyun
 
                     //kart durumunu güncelle kullanıcı ve bilgisayar için,
                     kullanici.KartSec();//kart durumu yerde olmuş oluyor
-                    bilgisayar.KartSec();//kart durumu??elde rastgele seçip yerde olmuş oluyor
-                   
-
-
+                    bilgisayar.KartSec();//kart durumu rastgele seçip yerde olmuş oluyor
                     break;
+
                 case SavasSonucu.Arac1Kazandi:
 
-                    kullanici.KartCekme(); //
-                    bilgisayar.KartCekme();
+                    kullanici.KartCekme(); //rasgele kart çekip listeye ekler
+                    bilgisayar.KartCekme();//rasgele kart çekip listeye ekler
                     break;
+
                 case SavasSonucu.Arac2Kazandi:
 
                     kullanici.KartCekme();

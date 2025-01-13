@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace SavasOyun.Oyuncular
 {
+
     public class Kullanici : Oyuncu
     {
+        //KULLANİCİ OYUNCU SINIFINI MİRAS ALIR
+
+        //BELLİ SEVİYEYE ULAŞTIĞINDA 20 VE ÜZERİ SİHA SİDA KFS KARTLARI AÇILIR.
+        
+        //KULLANİCİ BAŞLANGIÇTA 3 KART SEÇER
         public Kullanici(int id, string name) : base(id, name)
         {
             IsComputer = false;
@@ -20,5 +26,8 @@ namespace SavasOyun.Oyuncular
             kart.KartDurumu = KartDurumu.Yerde;
             return kart;
         }
+
+   
     }
 }
+ 

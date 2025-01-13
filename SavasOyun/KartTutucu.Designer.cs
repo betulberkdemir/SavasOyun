@@ -121,9 +121,9 @@
             this.lblKartAdi.AutoSize = true;
             this.lblKartAdi.Location = new System.Drawing.Point(5, 5);
             this.lblKartAdi.Name = "lblKartAdi";
-            this.lblKartAdi.Size = new System.Drawing.Size(34, 16);
+            this.lblKartAdi.Size = new System.Drawing.Size(39, 16);
             this.lblKartAdi.TabIndex = 15;
-            this.lblKartAdi.Text = "Siha";
+            this.lblKartAdi.Text = "Ucak";
             // 
             // pictureBox1
             // 
@@ -135,7 +135,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblLevel
             // 

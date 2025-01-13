@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -44,13 +36,21 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.arena1 = new System.Windows.Forms.Button();
+            this.arena2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.oyuncuButton = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.level = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.arena6 = new System.Windows.Forms.Button();
+            this.arena5 = new System.Windows.Forms.Button();
+            this.arena4 = new System.Windows.Forms.Button();
+            this.arena3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.kartTutucu6 = new SavasOyun.KartTutucu();
             this.kartTutucu5 = new SavasOyun.KartTutucu();
             this.kartTutucu4 = new SavasOyun.KartTutucu();
@@ -63,99 +63,13 @@
             this.kartTutucuKucuk3 = new SavasOyun.KartTutucuKucuk();
             this.kartTutucuKucuk2 = new SavasOyun.KartTutucuKucuk();
             this.kartTutucuKucuk1 = new SavasOyun.KartTutucuKucuk();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1085, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 863);
-            this.panel2.TabIndex = 1;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(53, 380);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(74, 40);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "button1";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(53, 214);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 40);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button1";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(53, 326);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(74, 40);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "button1";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(53, 160);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 40);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(53, 272);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(74, 40);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "button1";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(53, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(53, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(957, 29);
+            this.label1.Location = new System.Drawing.Point(967, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 16);
             this.label1.TabIndex = 18;
@@ -164,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(962, 88);
+            this.label2.Location = new System.Drawing.Point(976, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 19;
@@ -172,24 +86,24 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(965, 57);
+            this.textBox1.Location = new System.Drawing.Point(979, 132);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 22);
+            this.textBox1.Size = new System.Drawing.Size(73, 22);
             this.textBox1.TabIndex = 20;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(965, 115);
+            this.textBox2.Location = new System.Drawing.Point(979, 199);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(101, 22);
+            this.textBox2.Size = new System.Drawing.Size(73, 22);
             this.textBox2.TabIndex = 21;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(938, 190);
+            this.button8.Location = new System.Drawing.Point(966, 279);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(133, 49);
+            this.button8.Size = new System.Drawing.Size(105, 49);
             this.button8.TabIndex = 22;
             this.button8.Text = "START";
             this.button8.UseVisualStyleBackColor = true;
@@ -197,54 +111,64 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(938, 272);
+            this.button9.Location = new System.Drawing.Point(966, 345);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(133, 49);
+            this.button9.Size = new System.Drawing.Size(105, 49);
             this.button9.TabIndex = 23;
             this.button9.Text = "FİGHT";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(938, 351);
+            this.button10.Location = new System.Drawing.Point(966, 415);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(133, 49);
+            this.button10.Size = new System.Drawing.Size(105, 49);
             this.button10.TabIndex = 24;
             this.button10.Text = "END";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // arena1
             // 
-            this.button11.Location = new System.Drawing.Point(11, 819);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(152, 30);
-            this.button11.TabIndex = 25;
-            this.button11.Text = "Arena";
-            this.button11.UseVisualStyleBackColor = true;
+            this.arena1.Location = new System.Drawing.Point(19, 885);
+            this.arena1.Name = "arena1";
+            this.arena1.Size = new System.Drawing.Size(152, 30);
+            this.arena1.TabIndex = 25;
+            this.arena1.Text = "Arena";
+            this.arena1.UseVisualStyleBackColor = true;
+            this.arena1.Click += new System.EventHandler(this.arena1_Click);
             // 
-            // button12
+            // arena2
             // 
-            this.button12.Location = new System.Drawing.Point(190, 819);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(152, 30);
-            this.button12.TabIndex = 26;
-            this.button12.Text = "Arena";
-            this.button12.UseVisualStyleBackColor = true;
+            this.arena2.Location = new System.Drawing.Point(177, 885);
+            this.arena2.Name = "arena2";
+            this.arena2.Size = new System.Drawing.Size(152, 30);
+            this.arena2.TabIndex = 26;
+            this.arena2.Text = "Arena";
+            this.arena2.UseVisualStyleBackColor = true;
+            this.arena2.Click += new System.EventHandler(this.arena2_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.oyuncuButton);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.level);
+            this.panel1.Controls.Add(this.button17);
+            this.panel1.Controls.Add(this.button13);
+            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.kartTutucu6);
             this.panel1.Controls.Add(this.kartTutucu5);
             this.panel1.Controls.Add(this.kartTutucu4);
             this.panel1.Controls.Add(this.kartTutucu3);
             this.panel1.Controls.Add(this.kartTutucu2);
             this.panel1.Controls.Add(this.kartTutucu1);
-            this.panel1.Controls.Add(this.button16);
-            this.panel1.Controls.Add(this.button15);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.button11);
+            this.panel1.Controls.Add(this.arena6);
+            this.panel1.Controls.Add(this.arena5);
+            this.panel1.Controls.Add(this.arena4);
+            this.panel1.Controls.Add(this.arena3);
+            this.panel1.Controls.Add(this.arena2);
+            this.panel1.Controls.Add(this.arena1);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
@@ -261,49 +185,129 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1085, 863);
+            this.panel1.Size = new System.Drawing.Size(1085, 1055);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // oyuncuButton
+            // 
+            this.oyuncuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.oyuncuButton.Location = new System.Drawing.Point(970, 540);
+            this.oyuncuButton.Name = "oyuncuButton";
+            this.oyuncuButton.Size = new System.Drawing.Size(105, 33);
+            this.oyuncuButton.TabIndex = 36;
+            this.oyuncuButton.Text = "OYUNCU";
+            this.oyuncuButton.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(974, 58);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(87, 22);
+            this.textBox3.TabIndex = 2;
+            // 
+            // level
+            // 
+            this.level.AutoSize = true;
+            this.level.Location = new System.Drawing.Point(998, 29);
+            this.level.Name = "level";
+            this.level.Size = new System.Drawing.Size(40, 16);
+            this.level.TabIndex = 1;
+            this.level.Text = "Level";
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button17.Location = new System.Drawing.Point(21, 329);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(112, 23);
+            this.button17.TabIndex = 35;
+            this.button17.Text = "OYUNCU";
+            this.button17.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(366, 819);
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button13.Location = new System.Drawing.Point(21, 40);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(152, 30);
-            this.button13.TabIndex = 27;
-            this.button13.Text = "Arena";
-            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Size = new System.Drawing.Size(112, 23);
+            this.button13.TabIndex = 34;
+            this.button13.Text = "BİLGİSAYAR";
+            this.button13.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // button12
             // 
-            this.button14.Location = new System.Drawing.Point(542, 821);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(152, 30);
-            this.button14.TabIndex = 28;
-            this.button14.Text = "Arena";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button12.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button12.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(18, 624);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(946, 33);
+            this.button12.TabIndex = 33;
+            this.button12.Text = "OYUNCU KARTLARI";
+            this.button12.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // button11
             // 
-            this.button15.Location = new System.Drawing.Point(726, 821);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(152, 30);
-            this.button15.TabIndex = 29;
-            this.button15.Text = "Arena";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button11.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button11.Location = new System.Drawing.Point(19, 5);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(946, 33);
+            this.button11.TabIndex = 32;
+            this.button11.Text = "ARENA";
+            this.button11.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // arena6
             // 
-            this.button16.Location = new System.Drawing.Point(896, 821);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(152, 30);
-            this.button16.TabIndex = 30;
-            this.button16.Text = "Arena";
-            this.button16.UseVisualStyleBackColor = true;
+            this.arena6.Location = new System.Drawing.Point(813, 885);
+            this.arena6.Name = "arena6";
+            this.arena6.Size = new System.Drawing.Size(152, 30);
+            this.arena6.TabIndex = 30;
+            this.arena6.Text = "Arena";
+            this.arena6.UseVisualStyleBackColor = true;
+            // 
+            // arena5
+            // 
+            this.arena5.Location = new System.Drawing.Point(655, 885);
+            this.arena5.Name = "arena5";
+            this.arena5.Size = new System.Drawing.Size(152, 30);
+            this.arena5.TabIndex = 29;
+            this.arena5.Text = "Arena";
+            this.arena5.UseVisualStyleBackColor = true;
+            // 
+            // arena4
+            // 
+            this.arena4.Location = new System.Drawing.Point(497, 885);
+            this.arena4.Name = "arena4";
+            this.arena4.Size = new System.Drawing.Size(152, 30);
+            this.arena4.TabIndex = 28;
+            this.arena4.Text = "Arena";
+            this.arena4.UseVisualStyleBackColor = true;
+            // 
+            // arena3
+            // 
+            this.arena3.Location = new System.Drawing.Point(339, 885);
+            this.arena3.Name = "arena3";
+            this.arena3.Size = new System.Drawing.Size(152, 30);
+            this.arena3.TabIndex = 27;
+            this.arena3.Text = "Arena";
+            this.arena3.UseVisualStyleBackColor = true;
+            this.arena3.Click += new System.EventHandler(this.arena3_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.Location = new System.Drawing.Point(970, 590);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 37);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "BİLGİSAYAR";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // kartTutucu6
             // 
             this.kartTutucu6.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.kartTutucu6.Location = new System.Drawing.Point(620, 298);
+            this.kartTutucu6.Location = new System.Drawing.Point(662, 358);
             this.kartTutucu6.Name = "kartTutucu6";
             this.kartTutucu6.SavasKarti = null;
             this.kartTutucu6.Size = new System.Drawing.Size(298, 261);
@@ -312,7 +316,7 @@
             // kartTutucu5
             // 
             this.kartTutucu5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.kartTutucu5.Location = new System.Drawing.Point(316, 298);
+            this.kartTutucu5.Location = new System.Drawing.Point(358, 358);
             this.kartTutucu5.Name = "kartTutucu5";
             this.kartTutucu5.SavasKarti = null;
             this.kartTutucu5.Size = new System.Drawing.Size(298, 261);
@@ -321,16 +325,16 @@
             // kartTutucu4
             // 
             this.kartTutucu4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.kartTutucu4.Location = new System.Drawing.Point(12, 298);
+            this.kartTutucu4.Location = new System.Drawing.Point(21, 358);
             this.kartTutucu4.Name = "kartTutucu4";
             this.kartTutucu4.SavasKarti = null;
-            this.kartTutucu4.Size = new System.Drawing.Size(298, 261);
+            this.kartTutucu4.Size = new System.Drawing.Size(307, 261);
             this.kartTutucu4.TabIndex = 31;
             // 
             // kartTutucu3
             // 
             this.kartTutucu3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.kartTutucu3.Location = new System.Drawing.Point(620, 12);
+            this.kartTutucu3.Location = new System.Drawing.Point(659, 65);
             this.kartTutucu3.Name = "kartTutucu3";
             this.kartTutucu3.SavasKarti = null;
             this.kartTutucu3.Size = new System.Drawing.Size(298, 261);
@@ -339,7 +343,7 @@
             // kartTutucu2
             // 
             this.kartTutucu2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.kartTutucu2.Location = new System.Drawing.Point(316, 12);
+            this.kartTutucu2.Location = new System.Drawing.Point(355, 65);
             this.kartTutucu2.Name = "kartTutucu2";
             this.kartTutucu2.SavasKarti = null;
             this.kartTutucu2.Size = new System.Drawing.Size(298, 261);
@@ -348,16 +352,16 @@
             // kartTutucu1
             // 
             this.kartTutucu1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.kartTutucu1.Location = new System.Drawing.Point(12, 12);
+            this.kartTutucu1.Location = new System.Drawing.Point(18, 65);
             this.kartTutucu1.Name = "kartTutucu1";
             this.kartTutucu1.SavasKarti = null;
-            this.kartTutucu1.Size = new System.Drawing.Size(311, 261);
+            this.kartTutucu1.Size = new System.Drawing.Size(307, 261);
             this.kartTutucu1.TabIndex = 31;
             this.kartTutucu1.Load += new System.EventHandler(this.kartTutucu1_Load);
             // 
             // kartTutucuKucuk6
             // 
-            this.kartTutucuKucuk6.Location = new System.Drawing.Point(896, 595);
+            this.kartTutucuKucuk6.Location = new System.Drawing.Point(810, 663);
             this.kartTutucuKucuk6.Name = "kartTutucuKucuk6";
             this.kartTutucuKucuk6.SavasKarti = null;
             this.kartTutucuKucuk6.Size = new System.Drawing.Size(151, 218);
@@ -366,7 +370,7 @@
             // 
             // kartTutucuKucuk5
             // 
-            this.kartTutucuKucuk5.Location = new System.Drawing.Point(727, 595);
+            this.kartTutucuKucuk5.Location = new System.Drawing.Point(653, 663);
             this.kartTutucuKucuk5.Name = "kartTutucuKucuk5";
             this.kartTutucuKucuk5.SavasKarti = null;
             this.kartTutucuKucuk5.Size = new System.Drawing.Size(151, 218);
@@ -375,7 +379,7 @@
             // 
             // kartTutucuKucuk4
             // 
-            this.kartTutucuKucuk4.Location = new System.Drawing.Point(542, 595);
+            this.kartTutucuKucuk4.Location = new System.Drawing.Point(496, 663);
             this.kartTutucuKucuk4.Name = "kartTutucuKucuk4";
             this.kartTutucuKucuk4.SavasKarti = null;
             this.kartTutucuKucuk4.Size = new System.Drawing.Size(151, 218);
@@ -384,7 +388,7 @@
             // 
             // kartTutucuKucuk3
             // 
-            this.kartTutucuKucuk3.Location = new System.Drawing.Point(367, 595);
+            this.kartTutucuKucuk3.Location = new System.Drawing.Point(339, 663);
             this.kartTutucuKucuk3.Name = "kartTutucuKucuk3";
             this.kartTutucuKucuk3.SavasKarti = null;
             this.kartTutucuKucuk3.Size = new System.Drawing.Size(151, 218);
@@ -393,7 +397,7 @@
             // 
             // kartTutucuKucuk2
             // 
-            this.kartTutucuKucuk2.Location = new System.Drawing.Point(190, 595);
+            this.kartTutucuKucuk2.Location = new System.Drawing.Point(182, 663);
             this.kartTutucuKucuk2.Name = "kartTutucuKucuk2";
             this.kartTutucuKucuk2.SavasKarti = null;
             this.kartTutucuKucuk2.Size = new System.Drawing.Size(151, 218);
@@ -401,7 +405,7 @@
             // 
             // kartTutucuKucuk1
             // 
-            this.kartTutucuKucuk1.Location = new System.Drawing.Point(12, 595);
+            this.kartTutucuKucuk1.Location = new System.Drawing.Point(20, 663);
             this.kartTutucuKucuk1.Name = "kartTutucuKucuk1";
             this.kartTutucuKucuk1.SavasKarti = null;
             this.kartTutucuKucuk1.Size = new System.Drawing.Size(151, 218);
@@ -411,15 +415,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1297, 863);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1103, 1055);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Savaş Oyun";
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -427,14 +429,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
         private KartTutucuKucuk kartTutucuKucuk1;
         private KartTutucuKucuk kartTutucuKucuk2;
         private KartTutucuKucuk kartTutucuKucuk3;
@@ -448,19 +442,27 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button arena1;
+        private System.Windows.Forms.Button arena2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button arena6;
+        private System.Windows.Forms.Button arena5;
+        private System.Windows.Forms.Button arena4;
+        private System.Windows.Forms.Button arena3;
         private KartTutucu kartTutucu2;
         private KartTutucu kartTutucu1;
         private KartTutucu kartTutucu3;
         private KartTutucu kartTutucu6;
         private KartTutucu kartTutucu5;
         private KartTutucu kartTutucu4;
+        private System.Windows.Forms.Label level;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button oyuncuButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

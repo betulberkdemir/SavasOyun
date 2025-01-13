@@ -29,6 +29,7 @@ namespace SavasOyun.Araclar
 
 
 
+
         //ctor
         public SavasArac(int seviye = 0)
         {
