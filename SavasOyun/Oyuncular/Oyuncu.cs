@@ -1,6 +1,7 @@
 ﻿using SavasOyun.Araclar;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +28,10 @@ namespace SavasOyun.Oyuncular
         {
             OyuncuID = oyuncuId;
             OyuncuAdi = oyuncuAdi;
-
-
+            for (int i = 0; i < 6; i++)
+            {
+                KartCekme();
+            }
         }
 
 
@@ -42,21 +45,7 @@ namespace SavasOyun.Oyuncular
         public void KartCekme()
         {
             SavasArac kart = SavasAracExtensions.RasgeleKartOlustur(OzelAraclarAktif);
-            KartListesi.Add(kart);
-           
-        }
-
-
-        //ekrandan oyuncu kartları alanında başlangıçta 3karttipinden 6 tane kart göster.
-        public void KullaniciKartListesi()
-        {
-
-            for (int i = 0; i <= 6; i++)
-            {
-                KartCekme();
-
-            }
-
+            InsertKart(kart);
         }
 
         //SavasArac: Bu metodun dönüş türüdür. Yani, bu metod bir SavasArac nesnesi döner. 
@@ -68,11 +57,17 @@ namespace SavasOyun.Oyuncular
 
         public void KartYokEt(SavasArac kart)
         {
-            KartListesi.Remove(kart);
+            RemoveKart(kart);
+        }
 
+        protected virtual void InsertKart(SavasArac kart)
+        {
+            KartListesi.Add(kart);
+        }
+
+        protected virtual void RemoveKart(SavasArac kart)
+        {
+            KartListesi.Remove(kart);
         }
     }
-
-    
-    
 }

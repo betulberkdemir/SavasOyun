@@ -120,7 +120,7 @@ namespace SavasOyun
 
         public static void Test()
         {
-            Oyuncu kullanici = new Kullanici(1,"");
+            Oyuncu kullanici = null;/*new Kullanici(1,"");*/
             Oyuncu bilgisayar = new Bilgisayar();
 
             var arac1 = bilgisayar.KartSec();

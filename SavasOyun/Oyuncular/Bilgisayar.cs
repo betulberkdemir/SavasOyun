@@ -12,7 +12,7 @@ namespace SavasOyun.Oyuncular
         //BİLGİSAYAR OYUNCU SINIFINI MİRAS ALIR
         
         //BİLGİSAYAR SEVİYE NERDE(OYUNCU SINIFINDA)
-        public Bilgisayar(): base(-1, "Bilgisayar") // oyuncu id'ye neden -1 verdik, oyuncu adı
+        public Bilgisayar(): base(-1, "Bilgisayar") //
         {
             IsComputer = true;
             BilgisayarKartListesi();// Initialize KartListesi with cards specific to Bilgisayar
@@ -25,7 +25,6 @@ namespace SavasOyun.Oyuncular
 
         //ÖZEL KART DURUMU NASIL EKLİCEM???
 
-        //bilgisayar rastgele seçip 
         public override SavasArac KartSec(int index = 0)
         {
             SavasArac kart;
