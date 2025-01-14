@@ -14,8 +14,8 @@ namespace SavasOyun
     {
         YokOldular,
         Beraberlik,
-        Arac1Kazandi,
-        Arac2Kazandi,
+        BilgisayarKazandi,
+        OyuncuKazandi,
     }
     public static class SavasAracExtensions
     {
@@ -90,70 +90,88 @@ namespace SavasOyun
         }
 
         //kartları savaştır ve total dmg'e (label) gönder.
-        public static SavasSonucu KartlariSavastir(SavasArac arac1, SavasArac arac2)
+        public static SavasSonucu KartlariSavastir(KartTutucu bilgisayar, KartTutucu oyuncu)
         {
             // TODO: kart savaşma mekaniği
             //kartlarıın birbirine olan hasarını hesapla arac1.VurusHesapla
             //kartın dayanık ve rakibe olan hasar değerlerinden en küçük olanı al
             //bu değeri rakibe vur arac1.DayaniklilikGuncelle
-            //eğer bir kart diğerini öldürse onun seviyesini alır 
+            //eğer bir kart diğerini öldürse onun seviyesini alır
 
-            int vurus1 = arac1.VurusHesapla(arac2.Sinif);
-            int vurus2 = arac2.VurusHesapla(arac1.Sinif);
+            var bilgisayarKart = bilgisayar.SavasKarti;
+            var oyuncuKart = oyuncu.SavasKarti;
+
+            int bilgisayarVurus = bilgisayarKart.VurusHesapla(oyuncuKart.Sinif);
+            int oyuncuVurus = oyuncuKart.VurusHesapla(bilgisayarKart.Sinif);
+
             //can = dayanıklılık küçük olanı aldım.
-            int mumkunOlanVurus1 = Math.Min(vurus1, arac1.Dayaniklilik);
-            int mumkunOlanVurus2 = Math.Min(vurus2, arac2.Dayaniklilik);
-            //vuruş yaptım
-            arac1.DayaniklilikGuncelle(mumkunOlanVurus2);
-            arac2.DayaniklilikGuncelle(mumkunOlanVurus1);
+            int mumkunOlanVurusBilgisayar = Math.Min(bilgisayarVurus, bilgisayarKart.Dayaniklilik);
+            int mumkunOlanVurusOyuncu = Math.Min(oyuncuVurus, oyuncuKart.Dayaniklilik);
 
-            
-            if (arac1.Dayaniklilik <= 0 && arac2.Dayaniklilik <= 0)
+            bilgisayar.SetTotalDamage(mumkunOlanVurusBilgisayar); //total dmg'e yazdır
+            oyuncu.SetTotalDamage(mumkunOlanVurusOyuncu); //total dmg'e yazdır
+
+            //vuruş yaptım
+            bilgisayarKart.DayaniklilikGuncelle(mumkunOlanVurusOyuncu);
+            oyuncuKart.DayaniklilikGuncelle(mumkunOlanVurusBilgisayar);
+
+            bilgisayar.SetDurability(bilgisayarKart.Dayaniklilik);
+            oyuncu.SetDurability(oyuncuKart.Dayaniklilik);
+
+            if (bilgisayarKart.Dayaniklilik <= 0 && oyuncuKart.Dayaniklilik <= 0)
                 return SavasSonucu.YokOldular;
-            else if (arac1.Dayaniklilik <= 0)
-                return SavasSonucu.Arac2Kazandi;
-            else if (arac2.Dayaniklilik <= 0)
-                return SavasSonucu.Arac1Kazandi;
+            else if (bilgisayarKart.Dayaniklilik <= 0)
+            {
+                oyuncuKart.Seviye += Math.Max(bilgisayarKart.Seviye, 10);
+                oyuncu.SetLevel(oyuncuKart.Seviye);
+                return SavasSonucu.OyuncuKazandi;
+            }
+            else if (oyuncuKart.Dayaniklilik <= 0)
+            {
+                bilgisayarKart.Seviye += Math.Max(oyuncuKart.Seviye, 10);
+                bilgisayar.SetLevel(bilgisayarKart.Seviye);
+                return SavasSonucu.BilgisayarKazandi;
+            }
             else
                 return SavasSonucu.Beraberlik;
         }
 
         public static void Test()
         {
-            Oyuncu kullanici = null;/*new Kullanici(1,"");*/
-            Oyuncu bilgisayar = new Bilgisayar();
+            //Oyuncu kullanici = null;/*new Kullanici(1,"");*/
+            //Oyuncu bilgisayar = null;
 
-            var arac1 = bilgisayar.KartSec();
-            var arac2 = kullanici.KartSec(1); // bu sayı tıkladığı kartın indexi olmalı
+            //var arac1 = bilgisayar.KartSec();
+            //var arac2 = kullanici.KartSec(1); // bu sayı tıkladığı kartın indexi olmalı
 
-            SavasSonucu sonuc = KartlariSavastir(arac1, arac2);
+            //SavasSonucu sonuc = KartlariSavastir(arac1, arac2);
 
-            switch (sonuc)
-            {
-                case SavasSonucu.YokOldular:
-                    kullanici.KartYokEt(arac2);
-                    bilgisayar.KartYokEt(arac1);
-                    break;
-                case SavasSonucu.Beraberlik:
+            //switch (sonuc)
+            //{
+            //    case SavasSonucu.YokOldular:
+            //        kullanici.KartYokEt(arac2);
+            //        bilgisayar.KartYokEt(arac1);
+            //        break;
+            //    case SavasSonucu.Beraberlik:
 
-                    //kart durumunu güncelle kullanıcı ve bilgisayar için,
-                    kullanici.KartSec();//kart durumu yerde olmuş oluyor
-                    bilgisayar.KartSec();//kart durumu rastgele seçip yerde olmuş oluyor
-                    break;
+            //        //kart durumunu güncelle kullanıcı ve bilgisayar için,
+            //        kullanici.KartSec();//kart durumu yerde olmuş oluyor
+            //        bilgisayar.KartSec();//kart durumu rastgele seçip yerde olmuş oluyor
+            //        break;
 
-                case SavasSonucu.Arac1Kazandi:
+            //    case SavasSonucu.BilgisayarKazandi:
 
-                    kullanici.KartCekme(); //rasgele kart çekip listeye ekler
-                    bilgisayar.KartCekme();//rasgele kart çekip listeye ekler
-                    break;
+            //        kullanici.KartCekme(); //rasgele kart çekip listeye ekler
+            //        bilgisayar.KartCekme();//rasgele kart çekip listeye ekler
+            //        break;
 
-                case SavasSonucu.Arac2Kazandi:
+            //    case SavasSonucu.OyuncuKazandi:
 
-                    kullanici.KartCekme();
-                    bilgisayar.KartCekme();
+            //        kullanici.KartCekme();
+            //        bilgisayar.KartCekme();
 
-                    break;
-            }
+            //        break;
+            //}
         }
     }
 }

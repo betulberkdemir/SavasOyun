@@ -55,9 +55,12 @@ namespace SavasOyun.Oyuncular
         //abstract olarak başlattık kullanici ve bilgisayar sınıfında doldurduk.
         public abstract SavasArac KartSec(int index = 0); 
 
-        public void KartYokEt(SavasArac kart)
+        public void KartlariYokEt()
         {
-            RemoveKart(kart);
+            foreach (var kart in KartListesi.Where(x => x.Dayaniklilik <= 0).ToList())
+            {
+                RemoveKart(kart);
+            }
         }
 
         protected virtual void InsertKart(SavasArac kart)

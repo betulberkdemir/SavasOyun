@@ -25,19 +25,20 @@ namespace SavasOyun.Oyuncular
 
         public override SavasArac KartSec(int index = 0)
         {
-            var kart = KartListesi[index];
-            kart.KartDurumu = KartDurumu.Yerde;
-            return kart;
+            return KartListesi[index];
         }
 
-        private void UpdateKartTutucuKucukElements()
+        public void UpdateKartTutucuKucukElements()
         {
             if (_holders is null)
                 return;
 
-            for (int i = 0; i < KartListesi.Count; i++)
+            for (int i = 0; i < _holders.Count; i++)
             {
-                _holders[i].SavasKarti = KartListesi[i];
+                if (i < KartListesi.Count && KartListesi[i] != null && KartListesi[i].KartDurumu == KartDurumu.Elde)
+                    _holders[i].SavasKarti = KartListesi[i];
+                else
+                    _holders[i].SavasKarti = null;
             }
         }
 
