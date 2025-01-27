@@ -90,7 +90,7 @@ namespace SavasOyun
         }
 
         //kartları savaştır ve total dmg'e (label) gönder.
-        public static SavasSonucu KartlariSavastir(KartTutucu bilgisayar, KartTutucu oyuncu)
+        public static (SavasSonucu Sonuc, int Skor) KartlariSavastir(KartTutucu bilgisayar, KartTutucu oyuncu)
         {
             // TODO: kart savaşma mekaniği
             //kartlarıın birbirine olan hasarını hesapla arac1.VurusHesapla
@@ -119,21 +119,27 @@ namespace SavasOyun
             oyuncu.SetDurability(oyuncuKart.Dayaniklilik);
 
             if (bilgisayarKart.Dayaniklilik <= 0 && oyuncuKart.Dayaniklilik <= 0)
-                return SavasSonucu.YokOldular;
+                return (SavasSonucu.YokOldular, 0);
+
+
             else if (bilgisayarKart.Dayaniklilik <= 0)
             {
-                oyuncuKart.Seviye += Math.Max(bilgisayarKart.Seviye, 10);
+                int oSkor = Math.Max(bilgisayarKart.Seviye, 10);
+                oyuncuKart.Seviye += oSkor;
                 oyuncu.SetLevel(oyuncuKart.Seviye);
-                return SavasSonucu.OyuncuKazandi;
+                return (SavasSonucu.OyuncuKazandi, oSkor);
             }
+
+
             else if (oyuncuKart.Dayaniklilik <= 0)
             {
-                bilgisayarKart.Seviye += Math.Max(oyuncuKart.Seviye, 10);
+                int oSkor = Math.Max(oyuncuKart.Seviye, 10);
+                bilgisayarKart.Seviye += oSkor;
                 bilgisayar.SetLevel(bilgisayarKart.Seviye);
-                return SavasSonucu.BilgisayarKazandi;
+                return (SavasSonucu.BilgisayarKazandi, oSkor);
             }
             else
-                return SavasSonucu.Beraberlik;
+                return (SavasSonucu.Beraberlik, 0);
         }
 
         public static void Test()

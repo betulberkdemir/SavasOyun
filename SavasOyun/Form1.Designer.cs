@@ -31,31 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CompScore = new System.Windows.Forms.TextBox();
+            this.UserScore = new System.Windows.Forms.TextBox();
             this.StartBtn = new System.Windows.Forms.Button();
             this.FightBtn = new System.Windows.Forms.Button();
             this.arena1 = new System.Windows.Forms.Button();
             this.arena2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.oyuncuButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtMaxTur = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtTur = new System.Windows.Forms.TextBox();
             this.LblTur = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.arena6 = new System.Windows.Forms.Button();
-            this.arena5 = new System.Windows.Forms.Button();
-            this.arena4 = new System.Windows.Forms.Button();
-            this.arena3 = new System.Windows.Forms.Button();
             this.kartTutucu6 = new SavasOyun.KartTutucu();
             this.kartTutucu5 = new SavasOyun.KartTutucu();
             this.kartTutucu4 = new SavasOyun.KartTutucu();
             this.kartTutucu3 = new SavasOyun.KartTutucu();
             this.kartTutucu2 = new SavasOyun.KartTutucu();
             this.kartTutucu1 = new SavasOyun.KartTutucu();
+            this.arena6 = new System.Windows.Forms.Button();
+            this.arena5 = new System.Windows.Forms.Button();
+            this.arena4 = new System.Windows.Forms.Button();
+            this.arena3 = new System.Windows.Forms.Button();
             this.kartTutucuKucuk6 = new SavasOyun.KartTutucuKucuk();
             this.kartTutucuKucuk5 = new SavasOyun.KartTutucuKucuk();
             this.kartTutucuKucuk4 = new SavasOyun.KartTutucuKucuk();
@@ -68,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(967, 113);
+            this.label1.Location = new System.Drawing.Point(970, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 16);
             this.label1.TabIndex = 18;
@@ -77,30 +77,32 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(976, 171);
+            this.label2.Location = new System.Drawing.Point(979, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "User\'s Score";
             // 
-            // textBox1
+            // CompScore
             // 
-            this.textBox1.Location = new System.Drawing.Point(979, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(73, 22);
-            this.textBox1.TabIndex = 20;
+            this.CompScore.Location = new System.Drawing.Point(982, 153);
+            this.CompScore.Name = "CompScore";
+            this.CompScore.ReadOnly = true;
+            this.CompScore.Size = new System.Drawing.Size(73, 22);
+            this.CompScore.TabIndex = 20;
             // 
-            // textBox2
+            // UserScore
             // 
-            this.textBox2.Location = new System.Drawing.Point(979, 199);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(73, 22);
-            this.textBox2.TabIndex = 21;
+            this.UserScore.Location = new System.Drawing.Point(982, 220);
+            this.UserScore.Name = "UserScore";
+            this.UserScore.ReadOnly = true;
+            this.UserScore.Size = new System.Drawing.Size(73, 22);
+            this.UserScore.TabIndex = 21;
             // 
             // StartBtn
             // 
             this.StartBtn.Enabled = false;
-            this.StartBtn.Location = new System.Drawing.Point(970, 322);
+            this.StartBtn.Location = new System.Drawing.Point(974, 343);
             this.StartBtn.Name = "StartBtn";
             this.StartBtn.Size = new System.Drawing.Size(105, 49);
             this.StartBtn.TabIndex = 22;
@@ -110,7 +112,7 @@
             // 
             // FightBtn
             // 
-            this.FightBtn.Location = new System.Drawing.Point(970, 377);
+            this.FightBtn.Location = new System.Drawing.Point(974, 424);
             this.FightBtn.Name = "FightBtn";
             this.FightBtn.Size = new System.Drawing.Size(105, 49);
             this.FightBtn.TabIndex = 23;
@@ -142,9 +144,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.oyuncuButton);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.TxtMaxTur);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.TxtTur);
             this.panel1.Controls.Add(this.LblTur);
             this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.button13);
@@ -164,8 +166,8 @@
             this.panel1.Controls.Add(this.arena1);
             this.panel1.Controls.Add(this.FightBtn);
             this.panel1.Controls.Add(this.StartBtn);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.UserScore);
+            this.panel1.Controls.Add(this.CompScore);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.kartTutucuKucuk6);
@@ -180,38 +182,35 @@
             this.panel1.Size = new System.Drawing.Size(1085, 943);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // TxtMaxTur
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(970, 590);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 37);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "BİLGİSAYAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.TxtMaxTur.Location = new System.Drawing.Point(973, 40);
+            this.TxtMaxTur.Name = "TxtMaxTur";
+            this.TxtMaxTur.Size = new System.Drawing.Size(87, 22);
+            this.TxtMaxTur.TabIndex = 0;
+            this.TxtMaxTur.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMaxTur_KeyDown);
             // 
-            // oyuncuButton
+            // label3
             // 
-            this.oyuncuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.oyuncuButton.Location = new System.Drawing.Point(970, 540);
-            this.oyuncuButton.Name = "oyuncuButton";
-            this.oyuncuButton.Size = new System.Drawing.Size(105, 33);
-            this.oyuncuButton.TabIndex = 36;
-            this.oyuncuButton.Text = "OYUNCU";
-            this.oyuncuButton.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(991, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "MaxTur";
             // 
-            // textBox3
+            // TxtTur
             // 
-            this.textBox3.Location = new System.Drawing.Point(974, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(87, 22);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.TxtTur.Location = new System.Drawing.Point(974, 91);
+            this.TxtTur.Name = "TxtTur";
+            this.TxtTur.ReadOnly = true;
+            this.TxtTur.Size = new System.Drawing.Size(87, 22);
+            this.TxtTur.TabIndex = 2;
             // 
             // LblTur
             // 
             this.LblTur.AutoSize = true;
-            this.LblTur.Location = new System.Drawing.Point(1004, 39);
+            this.LblTur.Location = new System.Drawing.Point(1004, 72);
             this.LblTur.Name = "LblTur";
             this.LblTur.Size = new System.Drawing.Size(27, 16);
             this.LblTur.TabIndex = 1;
@@ -258,50 +257,6 @@
             this.button11.TabIndex = 32;
             this.button11.Text = "ARENA";
             this.button11.UseVisualStyleBackColor = false;
-            // 
-            // arena6
-            // 
-            this.arena6.Location = new System.Drawing.Point(813, 885);
-            this.arena6.Name = "arena6";
-            this.arena6.Size = new System.Drawing.Size(152, 30);
-            this.arena6.TabIndex = 30;
-            this.arena6.Tag = "5";
-            this.arena6.Text = "Arena";
-            this.arena6.UseVisualStyleBackColor = true;
-            this.arena6.Click += new System.EventHandler(this.arena_Click);
-            // 
-            // arena5
-            // 
-            this.arena5.Location = new System.Drawing.Point(655, 885);
-            this.arena5.Name = "arena5";
-            this.arena5.Size = new System.Drawing.Size(152, 30);
-            this.arena5.TabIndex = 29;
-            this.arena5.Tag = "4";
-            this.arena5.Text = "Arena";
-            this.arena5.UseVisualStyleBackColor = true;
-            this.arena5.Click += new System.EventHandler(this.arena_Click);
-            // 
-            // arena4
-            // 
-            this.arena4.Location = new System.Drawing.Point(497, 885);
-            this.arena4.Name = "arena4";
-            this.arena4.Size = new System.Drawing.Size(152, 30);
-            this.arena4.TabIndex = 28;
-            this.arena4.Tag = "3";
-            this.arena4.Text = "Arena";
-            this.arena4.UseVisualStyleBackColor = true;
-            this.arena4.Click += new System.EventHandler(this.arena_Click);
-            // 
-            // arena3
-            // 
-            this.arena3.Location = new System.Drawing.Point(339, 885);
-            this.arena3.Name = "arena3";
-            this.arena3.Size = new System.Drawing.Size(152, 30);
-            this.arena3.TabIndex = 27;
-            this.arena3.Tag = "2";
-            this.arena3.Text = "Arena";
-            this.arena3.UseVisualStyleBackColor = true;
-            this.arena3.Click += new System.EventHandler(this.arena_Click);
             // 
             // kartTutucu6
             // 
@@ -356,6 +311,50 @@
             this.kartTutucu1.SavasKarti = null;
             this.kartTutucu1.Size = new System.Drawing.Size(307, 261);
             this.kartTutucu1.TabIndex = 31;
+            // 
+            // arena6
+            // 
+            this.arena6.Location = new System.Drawing.Point(813, 885);
+            this.arena6.Name = "arena6";
+            this.arena6.Size = new System.Drawing.Size(152, 30);
+            this.arena6.TabIndex = 30;
+            this.arena6.Tag = "5";
+            this.arena6.Text = "Arena";
+            this.arena6.UseVisualStyleBackColor = true;
+            this.arena6.Click += new System.EventHandler(this.arena_Click);
+            // 
+            // arena5
+            // 
+            this.arena5.Location = new System.Drawing.Point(655, 885);
+            this.arena5.Name = "arena5";
+            this.arena5.Size = new System.Drawing.Size(152, 30);
+            this.arena5.TabIndex = 29;
+            this.arena5.Tag = "4";
+            this.arena5.Text = "Arena";
+            this.arena5.UseVisualStyleBackColor = true;
+            this.arena5.Click += new System.EventHandler(this.arena_Click);
+            // 
+            // arena4
+            // 
+            this.arena4.Location = new System.Drawing.Point(497, 885);
+            this.arena4.Name = "arena4";
+            this.arena4.Size = new System.Drawing.Size(152, 30);
+            this.arena4.TabIndex = 28;
+            this.arena4.Tag = "3";
+            this.arena4.Text = "Arena";
+            this.arena4.UseVisualStyleBackColor = true;
+            this.arena4.Click += new System.EventHandler(this.arena_Click);
+            // 
+            // arena3
+            // 
+            this.arena3.Location = new System.Drawing.Point(339, 885);
+            this.arena3.Name = "arena3";
+            this.arena3.Size = new System.Drawing.Size(152, 30);
+            this.arena3.TabIndex = 27;
+            this.arena3.Tag = "2";
+            this.arena3.Text = "Arena";
+            this.arena3.UseVisualStyleBackColor = true;
+            this.arena3.Click += new System.EventHandler(this.arena_Click);
             // 
             // kartTutucuKucuk6
             // 
@@ -431,8 +430,8 @@
         private KartTutucuKucuk kartTutucuKucuk6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CompScore;
+        private System.Windows.Forms.TextBox UserScore;
         private System.Windows.Forms.Button StartBtn;
         private System.Windows.Forms.Button FightBtn;
         private System.Windows.Forms.Button arena1;
@@ -449,13 +448,13 @@
         private KartTutucu kartTutucu5;
         private KartTutucu kartTutucu4;
         private System.Windows.Forms.Label LblTur;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtTur;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button oyuncuButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtMaxTur;
+        private System.Windows.Forms.Label label3;
     }
 }
 

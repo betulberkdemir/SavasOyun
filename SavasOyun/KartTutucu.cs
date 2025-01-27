@@ -52,7 +52,10 @@ namespace SavasOyun
                 TextDurability.Text = durability.ToString();
             }
         }
-
+        //kart tutucuda levelin set edilmesi.
+        //
+        //
+        //CompScore ve UserScore'da levelin set edilmesi gerekiyor.
         public void SetLevel(int level)
         {
             if (InvokeRequired)
@@ -63,6 +66,9 @@ namespace SavasOyun
                 TextLevel.Text = level.ToString();
             }
         }
+
+        
+
 
         private void SetSavasArac(SavasArac savasKarti)
         {

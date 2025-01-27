@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SavasOyun.Oyuncular
 {
@@ -34,13 +35,17 @@ namespace SavasOyun.Oyuncular
             }
         }
 
-
-        public void SkorGoster()
-        {
-            Console.WriteLine($"Skor: {Skor}");
-        }
-
+        //savaş başladığında her bir tur tamamlandıktan sonra sonucu textlevel'de göster.
         
+        //her tur tamamlandığında skorları göster bu texbox'da göster.
+
+        public void SkorGoster(TextBox textBox)
+        {
+            textBox.Text = Skor.ToString();
+        }
+       
+
+
         //VOİD = HİÇ dönüş değeri türü beklentim yok
         public void KartCekme()
         {
@@ -72,5 +77,7 @@ namespace SavasOyun.Oyuncular
         {
             KartListesi.Remove(kart);
         }
+
+
     }
 }

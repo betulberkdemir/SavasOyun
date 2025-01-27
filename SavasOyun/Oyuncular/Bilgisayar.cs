@@ -27,7 +27,6 @@ namespace SavasOyun.Oyuncular
         public override SavasArac KartSec(int index = 0)
         {
             SavasArac kart;
-
             do
             {
                 index = SavasAracExtensions.Random.Next(0, KartListesi.Count);
