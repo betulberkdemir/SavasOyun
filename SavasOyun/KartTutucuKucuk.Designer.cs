@@ -38,6 +38,7 @@
             this.lblKartAdi = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblKart = new System.Windows.Forms.Label();
+            this.lblid = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -129,7 +130,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblKart
             // 
@@ -140,10 +140,20 @@
             this.lblKart.TabIndex = 20;
             this.lblKart.Text = "Ucak";
             // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Location = new System.Drawing.Point(127, 4);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(18, 16);
+            this.lblid.TabIndex = 20;
+            this.lblid.Text = "id";
+            // 
             // KartTutucuKucuk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblid);
             this.Controls.Add(this.lblKart);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox1);
@@ -170,5 +180,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblKartAdi;
         private System.Windows.Forms.Label lblKart;
+        private System.Windows.Forms.Label lblid;
     }
 }

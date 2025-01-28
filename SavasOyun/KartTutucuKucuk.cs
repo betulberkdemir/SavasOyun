@@ -21,6 +21,7 @@ namespace SavasOyun
             get => _savasKarti;
             set => SetSavasArac(value);
         }
+        public Button ArenaButonu { get; set; }
 
         public KartTutucuKucuk()
         {
@@ -47,6 +48,7 @@ namespace SavasOyun
                     lblDenizAvantaji.Text = "";
                     lblHavaAvantaji.Text = "";
                     lblKaraAvantaji.Text = "";
+                    lblid.Text = "";
                 }
                 else
                 {
@@ -56,13 +58,10 @@ namespace SavasOyun
                     lblTur.Text = $"T:{savasKarti.Sinif}";
                     lblDayaniklilik.Text = $"D:{savasKarti.Dayaniklilik}";
                     lblVurus.Text = $"V:{savasKarti.Vurus}";
+                    lblid.Text = $"{savasKarti.Id}";
                 }
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

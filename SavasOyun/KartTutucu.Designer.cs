@@ -43,6 +43,8 @@
             this.TextDurability = new System.Windows.Forms.TextBox();
             this.lblTotalDmg = new System.Windows.Forms.Label();
             this.TextDmg = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textId = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -139,7 +141,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(225, 18);
+            this.lblLevel.Location = new System.Drawing.Point(223, 73);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(40, 16);
             this.lblLevel.TabIndex = 18;
@@ -147,7 +149,7 @@
             // 
             // TextLevel
             // 
-            this.TextLevel.Location = new System.Drawing.Point(212, 47);
+            this.TextLevel.Location = new System.Drawing.Point(212, 97);
             this.TextLevel.Name = "TextLevel";
             this.TextLevel.Size = new System.Drawing.Size(68, 22);
             this.TextLevel.TabIndex = 19;
@@ -155,7 +157,7 @@
             // lblDurability
             // 
             this.lblDurability.AutoSize = true;
-            this.lblDurability.Location = new System.Drawing.Point(213, 98);
+            this.lblDurability.Location = new System.Drawing.Point(213, 134);
             this.lblDurability.Name = "lblDurability";
             this.lblDurability.Size = new System.Drawing.Size(63, 16);
             this.lblDurability.TabIndex = 20;
@@ -163,7 +165,7 @@
             // 
             // TextDurability
             // 
-            this.TextDurability.Location = new System.Drawing.Point(212, 134);
+            this.TextDurability.Location = new System.Drawing.Point(212, 159);
             this.TextDurability.Name = "TextDurability";
             this.TextDurability.Size = new System.Drawing.Size(68, 22);
             this.TextDurability.TabIndex = 21;
@@ -171,7 +173,7 @@
             // lblTotalDmg
             // 
             this.lblTotalDmg.AutoSize = true;
-            this.lblTotalDmg.Location = new System.Drawing.Point(211, 175);
+            this.lblTotalDmg.Location = new System.Drawing.Point(212, 199);
             this.lblTotalDmg.Name = "lblTotalDmg";
             this.lblTotalDmg.Size = new System.Drawing.Size(70, 16);
             this.lblTotalDmg.TabIndex = 22;
@@ -179,10 +181,26 @@
             // 
             // TextDmg
             // 
-            this.TextDmg.Location = new System.Drawing.Point(212, 212);
+            this.TextDmg.Location = new System.Drawing.Point(212, 222);
             this.TextDmg.Name = "TextDmg";
             this.TextDmg.Size = new System.Drawing.Size(69, 22);
             this.TextDmg.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(236, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Id";
+            // 
+            // textId
+            // 
+            this.textId.Location = new System.Drawing.Point(214, 36);
+            this.textId.Name = "textId";
+            this.textId.Size = new System.Drawing.Size(68, 22);
+            this.textId.TabIndex = 19;
             // 
             // KartTutucu
             // 
@@ -193,6 +211,8 @@
             this.Controls.Add(this.lblTotalDmg);
             this.Controls.Add(this.TextDurability);
             this.Controls.Add(this.lblDurability);
+            this.Controls.Add(this.textId);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TextLevel);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.panel5);
@@ -225,5 +245,7 @@
         private System.Windows.Forms.TextBox TextDurability;
         private System.Windows.Forms.Label lblTotalDmg;
         private System.Windows.Forms.TextBox TextDmg;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textId;
     }
 }

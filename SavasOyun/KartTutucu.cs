@@ -93,6 +93,7 @@ namespace SavasOyun
                     TextLevel.Text = "";
                     TextDurability.Text = "";
                     TextDmg.Text = "";
+                    textId.Text = "";
                 }
                 else
                 {
@@ -101,8 +102,9 @@ namespace SavasOyun
                     lblDayaniklilik.Text = $"D:{savasKarti.Dayaniklilik}";
                     lblVurus.Text = $"V:{savasKarti.Vurus}";
                     TextDurability.Text = savasKarti.Dayaniklilik.ToString();
+                    textId.Text = savasKarti.Id.ToString();
 
-                    if(savasKarti is HavaArac havaArac)
+                    if (savasKarti is HavaArac havaArac)
                     {
                         lblKaraAvantaji.Text = $"KA:{havaArac.KaraVurusAvantaji}";
                     }

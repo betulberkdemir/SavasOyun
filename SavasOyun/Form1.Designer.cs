@@ -46,16 +46,16 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.arena6 = new System.Windows.Forms.Button();
+            this.arena5 = new System.Windows.Forms.Button();
+            this.arena4 = new System.Windows.Forms.Button();
+            this.arena3 = new System.Windows.Forms.Button();
             this.kartTutucu6 = new SavasOyun.KartTutucu();
             this.kartTutucu5 = new SavasOyun.KartTutucu();
             this.kartTutucu4 = new SavasOyun.KartTutucu();
             this.kartTutucu3 = new SavasOyun.KartTutucu();
             this.kartTutucu2 = new SavasOyun.KartTutucu();
             this.kartTutucu1 = new SavasOyun.KartTutucu();
-            this.arena6 = new System.Windows.Forms.Button();
-            this.arena5 = new System.Windows.Forms.Button();
-            this.arena4 = new System.Windows.Forms.Button();
-            this.arena3 = new System.Windows.Forms.Button();
             this.kartTutucuKucuk6 = new SavasOyun.KartTutucuKucuk();
             this.kartTutucuKucuk5 = new SavasOyun.KartTutucuKucuk();
             this.kartTutucuKucuk4 = new SavasOyun.KartTutucuKucuk();
@@ -258,6 +258,50 @@
             this.button11.Text = "ARENA";
             this.button11.UseVisualStyleBackColor = false;
             // 
+            // arena6
+            // 
+            this.arena6.Location = new System.Drawing.Point(813, 885);
+            this.arena6.Name = "arena6";
+            this.arena6.Size = new System.Drawing.Size(152, 30);
+            this.arena6.TabIndex = 30;
+            this.arena6.Tag = "5";
+            this.arena6.Text = "Arena";
+            this.arena6.UseVisualStyleBackColor = true;
+            this.arena6.Click += new System.EventHandler(this.arena_Click);
+            // 
+            // arena5
+            // 
+            this.arena5.Location = new System.Drawing.Point(655, 885);
+            this.arena5.Name = "arena5";
+            this.arena5.Size = new System.Drawing.Size(152, 30);
+            this.arena5.TabIndex = 29;
+            this.arena5.Tag = "4";
+            this.arena5.Text = "Arena";
+            this.arena5.UseVisualStyleBackColor = true;
+            this.arena5.Click += new System.EventHandler(this.arena_Click);
+            // 
+            // arena4
+            // 
+            this.arena4.Location = new System.Drawing.Point(497, 885);
+            this.arena4.Name = "arena4";
+            this.arena4.Size = new System.Drawing.Size(152, 30);
+            this.arena4.TabIndex = 28;
+            this.arena4.Tag = "3";
+            this.arena4.Text = "Arena";
+            this.arena4.UseVisualStyleBackColor = true;
+            this.arena4.Click += new System.EventHandler(this.arena_Click);
+            // 
+            // arena3
+            // 
+            this.arena3.Location = new System.Drawing.Point(339, 885);
+            this.arena3.Name = "arena3";
+            this.arena3.Size = new System.Drawing.Size(152, 30);
+            this.arena3.TabIndex = 27;
+            this.arena3.Tag = "2";
+            this.arena3.Text = "Arena";
+            this.arena3.UseVisualStyleBackColor = true;
+            this.arena3.Click += new System.EventHandler(this.arena_Click);
+            // 
             // kartTutucu6
             // 
             this.kartTutucu6.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -312,52 +356,9 @@
             this.kartTutucu1.Size = new System.Drawing.Size(307, 261);
             this.kartTutucu1.TabIndex = 31;
             // 
-            // arena6
-            // 
-            this.arena6.Location = new System.Drawing.Point(813, 885);
-            this.arena6.Name = "arena6";
-            this.arena6.Size = new System.Drawing.Size(152, 30);
-            this.arena6.TabIndex = 30;
-            this.arena6.Tag = "5";
-            this.arena6.Text = "Arena";
-            this.arena6.UseVisualStyleBackColor = true;
-            this.arena6.Click += new System.EventHandler(this.arena_Click);
-            // 
-            // arena5
-            // 
-            this.arena5.Location = new System.Drawing.Point(655, 885);
-            this.arena5.Name = "arena5";
-            this.arena5.Size = new System.Drawing.Size(152, 30);
-            this.arena5.TabIndex = 29;
-            this.arena5.Tag = "4";
-            this.arena5.Text = "Arena";
-            this.arena5.UseVisualStyleBackColor = true;
-            this.arena5.Click += new System.EventHandler(this.arena_Click);
-            // 
-            // arena4
-            // 
-            this.arena4.Location = new System.Drawing.Point(497, 885);
-            this.arena4.Name = "arena4";
-            this.arena4.Size = new System.Drawing.Size(152, 30);
-            this.arena4.TabIndex = 28;
-            this.arena4.Tag = "3";
-            this.arena4.Text = "Arena";
-            this.arena4.UseVisualStyleBackColor = true;
-            this.arena4.Click += new System.EventHandler(this.arena_Click);
-            // 
-            // arena3
-            // 
-            this.arena3.Location = new System.Drawing.Point(339, 885);
-            this.arena3.Name = "arena3";
-            this.arena3.Size = new System.Drawing.Size(152, 30);
-            this.arena3.TabIndex = 27;
-            this.arena3.Tag = "2";
-            this.arena3.Text = "Arena";
-            this.arena3.UseVisualStyleBackColor = true;
-            this.arena3.Click += new System.EventHandler(this.arena_Click);
-            // 
             // kartTutucuKucuk6
             // 
+            this.kartTutucuKucuk6.ArenaButonu = this.arena6;
             this.kartTutucuKucuk6.Location = new System.Drawing.Point(810, 663);
             this.kartTutucuKucuk6.Name = "kartTutucuKucuk6";
             this.kartTutucuKucuk6.SavasKarti = null;
@@ -366,6 +367,7 @@
             // 
             // kartTutucuKucuk5
             // 
+            this.kartTutucuKucuk5.ArenaButonu = this.arena5;
             this.kartTutucuKucuk5.Location = new System.Drawing.Point(653, 663);
             this.kartTutucuKucuk5.Name = "kartTutucuKucuk5";
             this.kartTutucuKucuk5.SavasKarti = null;
@@ -374,6 +376,7 @@
             // 
             // kartTutucuKucuk4
             // 
+            this.kartTutucuKucuk4.ArenaButonu = this.arena4;
             this.kartTutucuKucuk4.Location = new System.Drawing.Point(496, 663);
             this.kartTutucuKucuk4.Name = "kartTutucuKucuk4";
             this.kartTutucuKucuk4.SavasKarti = null;
@@ -382,6 +385,7 @@
             // 
             // kartTutucuKucuk3
             // 
+            this.kartTutucuKucuk3.ArenaButonu = this.arena3;
             this.kartTutucuKucuk3.Location = new System.Drawing.Point(339, 663);
             this.kartTutucuKucuk3.Name = "kartTutucuKucuk3";
             this.kartTutucuKucuk3.SavasKarti = null;
@@ -390,6 +394,7 @@
             // 
             // kartTutucuKucuk2
             // 
+            this.kartTutucuKucuk2.ArenaButonu = this.arena2;
             this.kartTutucuKucuk2.Location = new System.Drawing.Point(182, 663);
             this.kartTutucuKucuk2.Name = "kartTutucuKucuk2";
             this.kartTutucuKucuk2.SavasKarti = null;
@@ -398,6 +403,7 @@
             // 
             // kartTutucuKucuk1
             // 
+            this.kartTutucuKucuk1.ArenaButonu = this.arena1;
             this.kartTutucuKucuk1.Location = new System.Drawing.Point(20, 663);
             this.kartTutucuKucuk1.Name = "kartTutucuKucuk1";
             this.kartTutucuKucuk1.SavasKarti = null;

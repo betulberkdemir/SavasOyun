@@ -8,6 +8,9 @@ namespace SavasOyun.Araclar
 {
     public abstract class SavasArac
     {
+        //static sınıftan bağımsız olarak çalışır.
+        private static int lastId = 1;
+        public int Id { get; }
         //somut
         public int Seviye { get; set; }
 
@@ -33,6 +36,7 @@ namespace SavasOyun.Araclar
         //ctor
         public SavasArac(int seviye = 0)
         {
+            Id = lastId++;
             KartDurumu = KartDurumu.Elde;
         }
 

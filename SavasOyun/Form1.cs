@@ -37,9 +37,6 @@ namespace SavasOyun
             this.Size = new Size(850, 1000);
             // form 1121; 1102 ()
 
-            // Create Bilgisayar object
-            bilgisayar = new Bilgisayar();
-
             // Create Player object
             kullanici = new Kullanici(1, "Kullanıcı", 
                 new List<KartTutucuKucuk>
@@ -51,6 +48,9 @@ namespace SavasOyun
                     kartTutucuKucuk5,
                     kartTutucuKucuk6
                 });
+
+            // Create Bilgisayar object
+            bilgisayar = new Bilgisayar();
 
             Tur++;
         }
@@ -187,24 +187,63 @@ namespace SavasOyun
             kullanici.KartlariYokEt();
 
 
-            if (MaxTur == Tur) // eğer son tur ise puan kontrolü yapılır
-                               // eğer oyuncunun kartları bitmiş ise bilgisayar kazanır
-                               // eğer bilgisayarın kartları bitmiş ise oyuncu kazanır
-                               // eğer her ikisinin kartları bitmiş ise puan kontrolü yapılır
+            if (MaxTur == Tur || sonTur || kullanici.KartListesi.Count == 0 || bilgisayar.KartListesi.Count == 0)    
+                                            // eğer oyuncunun kartları bitmiş ise bilgisayar kazanır
+                                            // eğer bilgisayarın kartları bitmiş ise oyuncu kazanır
+                                            // eğer her ikisinin kartları bitmiş ise puan kontrolü yapılır
+                                            // eğer son tur ise puan kontrolü yapılır
             {
-                if (kullanici.Skor > bilgisayar.Skor)
-                    MessageBox.Show("Oyun bitti.Oyuncu kazandı.");
-                else if (kullanici.Skor < bilgisayar.Skor)
-                    MessageBox.Show("Bilgisayar kazandı.");
+
+                if(kullanici.KartListesi.Count == 0 && bilgisayar.KartListesi.Count > 0)
+                    MessageBox.Show("Oyuncunun kartları bitti.Bilgisayar kazandı.");
+                else if(kullanici.KartListesi.Count > 0 && bilgisayar.KartListesi.Count == 0)
+                    MessageBox.Show("Bilgisayarın kartları bitti.Oyuncu kazandı.");
                 else
-                    MessageBox.Show("Oyun berabere bitti.");
+                {
+                    if (kullanici.Skor > bilgisayar.Skor)
+                        MessageBox.Show("Oyun bitti.Oyuncu kazandı.");
+                    else if (kullanici.Skor < bilgisayar.Skor)
+                        MessageBox.Show("Bilgisayar kazandı.");
+                    else if (kullanici.Skor == bilgisayar.Skor)
+                        MessageBox.Show("Oyun berabere bitti.");
+                }
 
                 StartBtn.Enabled = false;
                 return;
             }
 
+            
+            // eğer oyuncunun kartları bitmiş ise bilgisayar kazanır
+            //if (kullanici.KartListesi.Count == 0)
+            //{
+            //    MessageBox.Show("Oyuncunun kartları bitti.Bilgisayar kazandı.");
+            //    StartBtn.Enabled = false;
+            //    return;
+            //}
+            //// eğer bilgisayarın kartları bitmiş ise oyuncu kazanır
+            //if (bilgisayar.KartListesi.Count == 0)
+            //{
+            //    MessageBox.Show("Bilgisayarın kartları bitti.Oyuncu kazandı.");
+            //    StartBtn.Enabled = false;
+            //    return;
+            //}
 
-            if(bilgisayar.KartListesi.Count == 1)
+            // eğer her ikisinin kartları bitmiş ise puan kontrolü yapılır
+            //if
+            //    (kullanici.KartListesi.Count == 0 && bilgisayar.KartListesi.Count == 0)
+            //{
+            //        if (kullanici.Skor > bilgisayar.Skor)
+            //            MessageBox.Show("Oyun bitti.Oyuncu kazandı.");
+            //        else if (kullanici.Skor < bilgisayar.Skor)
+            //            MessageBox.Show("Bilgisayar kazandı.");
+            //        else
+            //            MessageBox.Show("Oyun berabere bitti.");
+            //        StartBtn.Enabled = false;
+            //        return;
+            //    }
+
+
+                if (bilgisayar.KartListesi.Count == 1)
             {
                 bilgisayar.KartCekme();
                 sonTur = true;
@@ -224,6 +263,9 @@ namespace SavasOyun
                 kullanici.KartCekme();
             }
 
+            if (sonTur)
+                MessageBox.Show("Son tur");
+
             //kartları sıfırla
             kartTutucu1.SavasKarti.KartDurumu = KartDurumu.Elde;
             kartTutucu2.SavasKarti.KartDurumu = KartDurumu.Elde;
@@ -242,6 +284,12 @@ namespace SavasOyun
             kartTutucu6.Tag = null;
 
             ((Kullanici)kullanici).UpdateKartTutucuKucukElements();
+            arena1.Text = "Arena";
+            arena2.Text = "Arena";
+            arena3.Text = "Arena";
+            arena4.Text = "Arena";
+            arena5.Text = "Arena";
+            arena6.Text = "Arena";
 
             StartBtn.Enabled = false;
             FightBtn.Enabled = true;
