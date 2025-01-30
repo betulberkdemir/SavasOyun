@@ -12,10 +12,12 @@ Savaş Oyun is a strategy card game developed using **C# and .NET Framework 4.7.
 
 ## 🎮 Usage
 
-Oyunu başlattıktan sonra:
-1. Başlangıç ekranından "Yeni Oyun" seçeneğini tıklayın.
-2. Kartlarınızı seçin ve rakibinizle mücadeleye başlayın.
-3. Her turun sonunda stratejinizi belirleyerek savaşın kazananı olun!
+After the game starts
+1.	Run the application from Visual Studio.
+2.	The main form (Form1) will appear, allowing you to start a new game.
+3.	Select your cards and place them in the arena.
+4.	Click the "Fight" button to battle against the computer.
+5.	The game will display the results and update the scores accordingly.
 
 ---
 
