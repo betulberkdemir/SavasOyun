@@ -1,5 +1,5 @@
 SavasOyun
-
+![Image Alt](https://github.com/betulberkdemir/SavasOyun/blob/master/image.png))
 SavasOyun is a strategic card game developed using C# and .NET Framework 4.7.2. The game involves players selecting and battling with various war vehicles, each with unique attributes and advantages.
 
 Table of Contents
