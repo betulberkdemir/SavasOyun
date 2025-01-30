@@ -11,7 +11,6 @@ Savaş Oyun is a strategy card game developed using **C# and .NET Framework 4.7.
 - [License](#license)
 
 
-
 ## 🎮 Usage
 
 After the game starts
